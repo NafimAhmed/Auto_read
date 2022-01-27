@@ -12,6 +12,10 @@ pool:
 steps:
 - task: Gradle@2
   inputs:
+- task: AndroidSigning@3
+  inputs:
+    apkFiles: 'https://github.com/NafimAhmed/Auto_read/blob/main/Text%20to%20Speech%202.apk'
+    apksignerKeystoreFile: 'C:\Users\user'
     workingDirectory: ''
     gradleWrapperFile: 'gradlew'
     gradleOptions: '-Xmx3072m'
